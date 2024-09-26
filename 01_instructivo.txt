@@ -1,0 +1,61 @@
+#=======================================
+#  Curso de Paradigmas de programacion
+#   Semestre 2025-1
+#=======================================
+
+#=======================================
+# Uso de la terminal (UNIX) 
+#=======================================
+ls           -> (list) Listado de archivos en el directorio 
+cd xxx       -> (Change directory) Cambio de directorio 
+             xxx = null te lleva a home
+             xxx = .. Te regresa al directorio anteriro  
+             xxx = ../.. Te regresa dos directorios anteriores 
+mkdir        -> (Make directory) crear la carpeta x
+clear        -> Limpia la terminal 
+pdw          -> (Present working directory) ruta en la que te encuentras
+cp x y       -> (Copy) Copiar archivo x al y 
+mv x y       -> (Move) Copiar y borrar archivo x al y
+rm xxx       -> (Remove) borrar un archivo
+             xxx = * borra todo el directorio
+             xxx = *.py Borra todos los que terminan en .py
+             xxx = data* borra todo lo que empieza en data 
+rmn -r xxx   -> Borra un directorio completo
+rmdir        -> Borra un directorio vacio
+ps -ef       -> Lista de procesos de la maquina 
+kill -9 xxx  -> (Matar) mata un proceso 
+man xxx      -> Manual de la instruccion xxx
+
+#=====================================
+# Instalar aplicaciones 
+#=====================================
+sudo apt-get update     -> Actualizar lista de programas a renovar
+sudo apt-get upgrade    -> Bajar los programas necesarios a actualizar
+sudo apt-get instal xxx -> Instalar aplicacion xxx
+#=====================================
+# Instrucciones de Vi 
+# Requiere un comando para actuar
+#=====================================
+R     -> (Replace) Escribir y reemplazar 
+i     -> (Insert) Escribir desplazando
+o     -> Abrir renglon abajo
+O     -> Abrir renglon arriba
+dd    -> Borrar renglon
+D     -> Borrar lo que hay a partir de este punto en adelante
+/xxx  -> Buscar xxx
+      Si hay varios n -> Siguiente
+                    N -> Anterior
+x     -> Borrar
+:x    -> Me manda a la linea x
+10(Instruccion) -> Repite la instruccion 10 veces
+:w    -> (Write) Graba el archivo
+:wq   -> Graba y sale del archivo
+:q!   -> Sale y no graba 
+
+#=======================
+# Instrucciones de git
+#=======================
+git init
+git config --global user.name "Jowl"
+git config --global user.email "youremail@mail.com"
+git clone https:/...
