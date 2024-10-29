@@ -73,4 +73,42 @@ print("Radio de la llanta 4 = ", llanta4.radio)
 print("Radio de la llanta 4 = ", llanta3.radio)
 print("Persion de la llanta 1 de mi coche = ", micoche.llanta1.presion)
 
+#=====================
+#   Encapsulamiento
+#=====================
 
+#=========================================================================
+#   Uso de la funcion de python property para poner  y obtener atributos 
+#   a variables protegidas con __
+#=========================================================================
+class Estudiante:
+    def __init__(mi):
+        mi.__nombre = ""
+    def ponerme_nombre(mi,nombre):
+        print("Se llamo a ponerme_nombre")
+        mi.__nombre = nombre
+    def obtener_nombre(mi):
+        print("Se llamo a obtener_nombre") 
+        return mi.__nombre
+    nombre = property(obtener_nombre, ponerme_nombre) 
+
+#========================================
+#   Crear objeto estudiante sin nombre 
+#========================================
+estudiante = Estudiante() 
+
+#==========================================================================
+#   Ponerle nombre usando la propiedad nombre y el metodo ponerme_nombre
+#   (sin tener que llamar explicitamente la funcion)
+#==========================================================================
+estudiante.nombre = "Diego"
+
+#=======================================================================
+#   Obtener el nombre con el metodo obtener_nombre 
+#   __nombre es una variable encapsulada (no visible desde fuera)
+#   (sin tener que llamar explicitamente a la funcion obtener_nombre)
+#=======================================================================
+print(estudiante.nombre)
+
+# Esto no funciona
+# print(estudiante .__nombre)
