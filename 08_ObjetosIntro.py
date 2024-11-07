@@ -112,3 +112,70 @@ print(estudiante.nombre)
 
 # Esto no funciona
 # print(estudiante .__nombre)
+
+#========================
+#   Herencia de clases
+#========================
+class Cuadrilatero:
+    def __init__(mi, a, b, c, d):
+        mi.lado1 = a
+        mi.lado2 = b
+        mi.lado3 = c
+        mi.lado4 = d
+
+    def perimetro(mi):
+        p=mi.lado1 + mi.lado2 + mi.lado3 + mi.lado4
+        print("Perimetros = ", p)
+        return p 
+
+#========================================
+#   Su hijo rectangulo 
+#   Rectangulo es hijo de Cuadrilatero 
+#   Rectangulo (Cuadrilatero)
+#========================================
+class Rectangulo (Cuadrilatero):
+    def __init__(self, a, b):
+        #=============================
+        #   Constructor de su madre
+        #=============================
+        super().__init__(a, b, a, b)
+
+#========================
+#   Su nieto Cuadrado
+#   Hijo de Rectangulo 
+#========================
+class Cuadrado(Rectangulo):
+    def __init__(self,a):
+        super().__init__(a,a)
+
+    def area(self):
+        area = self.lado1**2
+        return area
+
+    #def perimetro(self):
+    #   p = 4.0*self.lado1
+    #   print("perimetro = ",p)
+    # return p
+
+#=======================
+#   Crear un cuadrado 
+#=======================
+cuadrado1 = Cuadrado(5)
+
+#==========================================================
+#   Llamar al metodo perimetro de su abuelo Cuadrilatero 
+#==========================================================
+perimetro1 = cuadrado1.perimetro()
+
+#=======================================
+#   Llamar a su propio metodo de area
+#=======================================
+area1 = cuadrado1.area()
+
+print("Perimetro = ", perimetro1)
+print("Area = ", area1)
+
+#====================================================================
+#   Sobre-escribir un metodo de su madre o abuela o tatarabuela...
+#   Es volver a definir a una funcion ya existente
+#====================================================================
