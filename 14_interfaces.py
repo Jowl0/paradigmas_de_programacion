@@ -40,6 +40,29 @@ repositorioS3 = S3("321221321","sdf324223","MiCubeta")
 
 #=================================================================
 #   Interface inscribirUsuario del objeto ManejoDeInscripciones
-ManejoDeInscripciones.inscribirUsuario(usuario,repositorios)
+#=================================================================
+ManejoDeInscripciones.inscribirUsuario(usuario,repositoriosS3)
+print("\n")
+
+#=========================================
+#   Crear el objeto sistema de archivos 
+#=========================================
+repositorioSistemaDeArchivos = SistemaDeArchivos ("/home/users")
+
+#=================================================================
+#   Interface inscribirUsuario del objeto ManejoDeInscripciones
+#=================================================================
+ManejoDeInscripciones.inscribirUsuario(usuario,repositorioSistemaDeArchivos)
+print("\n")
+
+#=================================
+#   Crear el objeto basededatos
+#=================================
+repositorioBaseDeDatos = BaseDeDatos("localhost","admin","admin123")
+
+#==================================================================
+#   Interface inscribirUsuario del obejeto ManejoDeInscripciones
+#==================================================================
+ManejoDeInscripciones.inscribirUsuario(usuario,repositorioBaseDeDatos)
 print("\n")
 
