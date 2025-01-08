@@ -15,10 +15,10 @@ class S3(RepositorioDeUsuarios):
         mi.__bucket = bucket 
 
     def abrir(mi) -> None:
-        print(f#Estableciendo a AWS S3 {mi.__clientId}:{mi.__secretKey}")
+        print(f"#Estableciendo a AWS S3 {mi.__clientId}:{mi.__secretKey}")
 
     def guardar (mi,usuario:Usuario) -> None:
-              userData = {"nombre" : usuerio.getNombre(),
+              userData = {"nombre" : usuario.getNombre(),
                           "apellido": usuario.getApellido(),
                           "edad" : usuario.getEdad()}
               print(f"Guardando usuario de la bandeja: {mi.__bucket}: {userData}")
